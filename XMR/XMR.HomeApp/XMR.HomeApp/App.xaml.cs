@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XMR.HomeApp.Pages;
 
 namespace XMR.HomeApp
 {
