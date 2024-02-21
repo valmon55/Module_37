@@ -10,7 +10,7 @@ namespace XMR.HomeApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoadingPage();
         }
 
         protected override void OnStart()
