@@ -11,7 +11,7 @@ namespace XMR.HomeApp
         {
             InitializeComponent();
 
-            MainPage = new RoomsPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

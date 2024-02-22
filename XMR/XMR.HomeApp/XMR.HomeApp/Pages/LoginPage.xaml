@@ -6,7 +6,8 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
             <Label Text="HomeApp - Ваш умный дом" FontSize="Title" Padding="30,10,30,10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-            <Button x:Name="loginButton" Text="{x:Static local:LoginPage.BUTTON_TEXT}" Clicked="login_Click" />
+            <Button x:Name="loginButton" Text="{x:Static local:LoginPage.BUTTON_TEXT}" 
+                    Clicked="login_Click" CornerRadius="{local:ButtonView ButtonStyle=Round}"  />
             <Label x:Name="errorMessage" FontSize="Small" TextColor="Red" Padding="30,10,30,10" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
         </StackLayout>
     </ContentPage.Content>
