@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace XMR.HomeApp.Pages
@@ -13,7 +11,7 @@ namespace XMR.HomeApp.Pages
         public int Blue { get; set; }
         public object ProvideValue(IServiceProvider serviceProvider)
         {
-            return Color.FromArgb(Red, Green, Blue);
+            return Color.FromRgb(Red, Green, Blue);
         }
     }
 }
