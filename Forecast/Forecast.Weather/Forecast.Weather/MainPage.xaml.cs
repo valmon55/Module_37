@@ -14,5 +14,10 @@ namespace Forecast.Weather
         {
             InitializeComponent();
         }
+
+        private void GetWeather(object sender, EventArgs e)
+        {
+
+        }
     }
 }
