@@ -42,6 +42,8 @@ namespace XMR.HomeApp.Pages
             grid.Children.Add(new BoxView { Color = Color.FromRgb(0, 76, 199) }, 2, 1);
             grid.Children.Add(new BoxView { Color = Color.FromRgb(0, 76, 199) }, 2, 2);
 
+            grid.ColumnSpacing = 20;
+            grid.RowSpacing = 20;
             Content = grid;
         }
     }
