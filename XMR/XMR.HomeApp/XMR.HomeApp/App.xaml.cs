@@ -11,7 +11,7 @@ namespace XMR.HomeApp
         {
             InitializeComponent();
 
-            MainPage = new GridPage();
+            MainPage = new MergeGridPage();
         }
 
         protected override void OnStart()
