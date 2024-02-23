@@ -4,23 +4,21 @@
              x:Class="XMR.HomeApp.Pages.AboutPage">
     <ContentPage.Content>
         <RelativeLayout x:Name="container">
-            <BoxView x:Name="boxView"
-                       WidthRequest="50"
-                       HeightRequest="50" Color="LightBlue"
-                       RelativeLayout.XConstraint=
-           "{ConstraintExpression
-                           Type=RelativeToParent,
-                           Property=Width,
-                           Factor=0.5,
-                           Constant=-25
-                           }" 
-   RelativeLayout.YConstraint=
-   "{ConstraintExpression
-                       Type=RelativeToParent,
-                       Property=Height,
-                       Factor=0.5,
-                       Constant=-25}"                     
-                     />
+            <BoxView x:Name="boxView" Color="Blue" WidthRequest="50" HeightRequest="50" 
+                     RelativeLayout.XConstraint="{ConstraintExpression                
+                     Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-25}" 
+                     RelativeLayout.YConstraint="{ConstraintExpression                
+                     Type=RelativeToParent, Property=Height, Factor=0.5, Constant=-25}" />
+            <BoxView x:Name="boxView2" WidthRequest="50" HeightRequest="50" Color="DarkBlue" 
+                     RelativeLayout.XConstraint="{ConstraintExpression 
+                     ElementName=boxView, Type=RelativeToView, Constant=-100, Property=X}" 
+                     RelativeLayout.YConstraint="{ConstraintExpression 
+                     Type=RelativeToView, ElementName=boxView, Property=Y, Constant=0}" />
+            <BoxView x:Name="boxView3" WidthRequest="50" HeightRequest="50" Color="LightBlue" 
+                     RelativeLayout.XConstraint="{ConstraintExpression 
+                     ElementName=boxView, Type=RelativeToView, Constant=100, Property=X}" 
+                     RelativeLayout.YConstraint="{ConstraintExpression 
+                     Type=RelativeToView, ElementName=boxView, Property=Y, Constant=0}" />
         </RelativeLayout>    
     </ContentPage.Content>
 </ContentPage>
