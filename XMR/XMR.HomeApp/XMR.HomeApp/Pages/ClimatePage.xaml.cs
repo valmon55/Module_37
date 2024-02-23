@@ -16,6 +16,7 @@ namespace XMR.HomeApp.Pages
             InitializeComponent();
             ScanInside();
             ScanOutside();
+            GetPressure();
         }
         /// <summary>
         /// Внешние датчики
@@ -88,6 +89,24 @@ namespace XMR.HomeApp.Pages
                 },
                 new Rectangle(130, 15, 100, 70)
             );
+        }
+        public void GetPressure()
+        {
+            // Создаем новый элемент
+            var pressureBox = new BoxView { Color = Color.BurlyWood };
+            // Указываем позицию, абсолютные
+            //var position = new Rectangle(240, 10, 173, 70);
+            // Указываем позицию, относительные
+            var position = new Rectangle(0.5, 0.5, 0.25, 0.5);
+            // Сохраняем настройки лейаута
+            AbsoluteLayout.SetLayoutBounds(pressureBox, position);
+            // Устанавливаем конфигурацию (все величины абсолютные)
+            //AbsoluteLayout.SetLayoutFlags(pressureBox, AbsoluteLayoutFlags.None);
+            // Устанавливаем конфигурацию (все величины относительные)
+            AbsoluteLayout.SetLayoutFlags(pressureBox, AbsoluteLayoutFlags.All);
+
+            // Добавляем элемент
+            absLayout.Children.Add(pressureBox);
         }
     }
 }
