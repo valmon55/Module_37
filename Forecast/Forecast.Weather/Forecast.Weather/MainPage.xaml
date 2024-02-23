@@ -3,8 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Forecast.Weather.MainPage">
 
-    <StackLayout>
+    <RelativeLayout x:Name="container">
+        <BoxView x:Name="temper_inside" BackgroundColor="Aquamarine" WidthRequest="100" HeightRequest="100" 
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.333, Property=Height}" />
+
         <Label Text="Welcome to WeatherApp!" FontSize="Title" Padding="30,10,30,10" VerticalOptions="Center" HorizontalOptions="Center"/>
         <Button Text="GET WEATHER" FontSize="16" Padding="30,0,30,0" VerticalOptions="Center" HorizontalOptions="Center" Clicked="GetWeather"/>
-    </StackLayout>
+    </RelativeLayout>
 </ContentPage>
