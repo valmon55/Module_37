@@ -30,20 +30,22 @@ namespace XMR.HomeApp.Pages
                 // Деактивируем кнопку
                 loginButton.IsEnabled = false;
                 // Показываем текстовое сообщение об ошибке
-                stackLayout.Children.Add(new Label
-                {
-                    Text = "Слишком много попыток! Попробуйте позже.",
-                    TextColor = Color.Red,
-                    VerticalTextAlignment = TextAlignment.Center,
-                    HorizontalTextAlignment = TextAlignment.Center,
-                    Padding = new Thickness()
-                    {
-                        Bottom = 30,
-                        Left = 10,
-                        Top = 30,
-                        Right = 10
-                    }
-                });                
+                var infoMessage = (Label)stackLayout.Children.Last();
+                infoMessage.Text = "Слишком много попыток! Попробуйте позже.";
+                //stackLayout.Children.Add(new Label
+                //{
+                //    Text = "Слишком много попыток! Попробуйте позже.",
+                //    TextColor = Color.Red,
+                //    VerticalTextAlignment = TextAlignment.Center,
+                //    HorizontalTextAlignment = TextAlignment.Center,
+                //    Padding = new Thickness()
+                //    {
+                //        Bottom = 30,
+                //        Left = 10,
+                //        Top = 30,
+                //        Right = 10
+                //    }
+                //});                
             }
             else
             {
