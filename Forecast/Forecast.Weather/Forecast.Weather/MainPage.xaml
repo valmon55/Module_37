@@ -12,28 +12,27 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <BoxView x:Name="temper_inside" BackgroundColor="PapayaWhip" Grid.Column="0" Grid.Row="0" WidthRequest="100" HeightRequest="100" 
-                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.333, Property=Height}" />
+        <BoxView x:Name="temper_inside" BackgroundColor="PapayaWhip" Grid.Column="0" Grid.Row="0" />
         <BoxView x:Name="temper_ouside" BackgroundColor="LightBlue" Grid.Column="0" Grid.Row="1" WidthRequest="100" HeightRequest="100" 
                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.333, Property=Height}" />
+        <BoxView x:Name="pressure" BackgroundColor="DarkCyan" Grid.Column="0" Grid.Row="2" WidthRequest="100" HeightRequest="100" 
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.333, Property=Height}" />
         <StackLayout x:Name="inside" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" >
-            <Label TextColor="Black" Text="inside" FontSize="Title" HorizontalOptions="Center"/>
-            <Label TextColor="Black" Text="+ 26 C" FontSize="30" HorizontalOptions="Center" />
+            <Label TextColor="Black" Text="Inside" FontSize="48" HorizontalOptions="Center"/>
+            <Label TextColor="Black" Text="+ 26 C" FontSize="96" HorizontalOptions="Center" />
         </StackLayout>
         <StackLayout x:Name="outside" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" >
-            <Label TextColor="Black" Text="outside" FontSize="Title" HorizontalOptions="Center"/>
-            <Label TextColor="Black" Text="- 15 C" FontSize="72" HorizontalOptions="Center" />
+            <Label TextColor="Black" Text="outside" FontSize="48" HorizontalOptions="Center"/>
+            <Label TextColor="Black" Text="- 15 C" FontSize="96" HorizontalOptions="Center" />
         </StackLayout>
         <StackLayout x:Name="pres" Grid.Column="0" Grid.Row="2" VerticalOptions="Center" >
-            <Label TextColor="Black" Text="pressure" FontSize="Title" HorizontalOptions="Center"/>
-            <Label TextColor="Black" Text="760 mm" FontSize="72" HorizontalOptions="Center" />
+            <Label TextColor="Black" Text="Pressure" FontSize="48" HorizontalOptions="Center"/>
+            <Label TextColor="Black" Text="760 mm" FontSize="96" HorizontalOptions="Center" />
         </StackLayout>
 
-        <StackLayout x:Name="startLay" Grid.Column="0" Grid.Row="1" VerticalOptions="Center">
+        <StackLayout x:Name="startLay" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" IsVisible="false">
             <Label x:Name="title" Text="Welcome to WeatherApp!" FontSize="Title" Padding="30,10,30,10" VerticalOptions="Center" HorizontalOptions="Center"/>
             <Button x:Name="getWeather" Text="GET WEATHER" FontSize="16" Padding="30,0,30,0" VerticalOptions="Center" HorizontalOptions="Center" Clicked="GetWeather"/>
         </StackLayout>
-        <BoxView x:Name="pressure" BackgroundColor="DarkCyan" Grid.Column="0" Grid.Row="2" WidthRequest="100" HeightRequest="100" 
-                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.333, Property=Height}" />
     </Grid>
 </ContentPage>
