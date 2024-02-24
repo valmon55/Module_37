@@ -17,6 +17,11 @@ namespace Forecast.Weather
 
         private void GetWeather(object sender, EventArgs e)
         {
+            //var elements = container.Children;
+            foreach(var element in container.Children.ToList())
+            {
+                container.Children.Remove(element);
+            }
             if(title != null)
             {
                 title.Text = "";   
