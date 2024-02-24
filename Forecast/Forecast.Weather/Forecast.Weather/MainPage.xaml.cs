@@ -17,7 +17,15 @@ namespace Forecast.Weather
 
         private void GetWeather(object sender, EventArgs e)
         {
-
+            if(title != null)
+            {
+                title.Text = "";   
+            }
+            if(getWeather != null)
+            {
+                getWeather.Text = "";
+                getWeather.BackgroundColor = Color.Transparent;
+            }
         }
     }
 }
