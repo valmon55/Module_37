@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Forecast.Weather.MainPage">
 
-    <Grid x:Name="container" BackgroundColor="Black">
+    <Grid x:Name="container" BackgroundColor="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
@@ -12,25 +12,23 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <BoxView x:Name="temper_inside" BackgroundColor="PapayaWhip" Grid.Column="0" Grid.Row="0" />
-        <BoxView x:Name="temper_ouside" BackgroundColor="LightBlue" Grid.Column="0" Grid.Row="1" WidthRequest="100" HeightRequest="100" 
-                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.333, Property=Height}" />
-        <BoxView x:Name="pressure" BackgroundColor="DarkCyan" Grid.Column="0" Grid.Row="2" WidthRequest="100" HeightRequest="100" 
-                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.333, Property=Height}" />
-        <StackLayout x:Name="inside" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" >
+        <BoxView x:Name="temper_inside" BackgroundColor="PapayaWhip" Grid.Column="0" Grid.Row="0" IsVisible="false" />
+        <BoxView x:Name="temper_ouside" BackgroundColor="LightBlue" Grid.Column="0" Grid.Row="1" IsVisible="false" />
+        <BoxView x:Name="pressure" BackgroundColor="DarkCyan" Grid.Column="0" Grid.Row="2" IsVisible="false"/>
+        <StackLayout x:Name="inside" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" IsVisible="false"  >
             <Label TextColor="Black" Text="Inside" FontSize="48" HorizontalOptions="Center"/>
             <Label TextColor="Black" Text="+ 26 C" FontSize="96" HorizontalOptions="Center" />
         </StackLayout>
-        <StackLayout x:Name="outside" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" >
+        <StackLayout x:Name="outside" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" IsVisible="false"  >
             <Label TextColor="Black" Text="outside" FontSize="48" HorizontalOptions="Center"/>
             <Label TextColor="Black" Text="- 15 C" FontSize="96" HorizontalOptions="Center" />
         </StackLayout>
-        <StackLayout x:Name="pres" Grid.Column="0" Grid.Row="2" VerticalOptions="Center" >
+        <StackLayout x:Name="pres" Grid.Column="0" Grid.Row="2" VerticalOptions="Center" IsVisible="false"  >
             <Label TextColor="Black" Text="Pressure" FontSize="48" HorizontalOptions="Center"/>
             <Label TextColor="Black" Text="760 mm" FontSize="96" HorizontalOptions="Center" />
         </StackLayout>
 
-        <StackLayout x:Name="startLay" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" IsVisible="false">
+        <StackLayout x:Name="startLay" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" IsVisible="true">
             <Label x:Name="title" Text="Welcome to WeatherApp!" FontSize="Title" Padding="30,10,30,10" VerticalOptions="Center" HorizontalOptions="Center"/>
             <Button x:Name="getWeather" Text="GET WEATHER" FontSize="16" Padding="30,0,30,0" VerticalOptions="Center" HorizontalOptions="Center" Clicked="GetWeather"/>
         </StackLayout>

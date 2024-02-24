@@ -17,20 +17,34 @@ namespace Forecast.Weather
 
         private void GetWeather(object sender, EventArgs e)
         {
-            //var elements = container.Children;
-            foreach(var element in container.Children.ToList())
+            foreach(var element in container.Children) 
             {
-                container.Children.Remove(element);
+                if (element.IsVisible)
+                {
+                    element.IsVisible = false;
+                }
+                else
+                {
+                    element.IsVisible = true;
+                }
             }
-            if(title != null)
-            {
-                title.Text = "";   
-            }
-            if(getWeather != null)
-            {
-                getWeather.Text = "";
-                getWeather.BackgroundColor = Color.Transparent;
-            }
+            container.BackgroundColor = Color.Black;
+
+            ////удаление из контейнера
+            //foreach(var element in container.Children.ToList())
+            //{
+            //    container.Children.Remove(element);
+            //}
+            ////или стирание значений
+            //if(title != null)
+            //{
+            //    title.Text = "";   
+            //}
+            //if(getWeather != null)
+            //{
+            //    getWeather.Text = "";
+            //    getWeather.BackgroundColor = Color.Transparent;
+            //}
         }
     }
 }
